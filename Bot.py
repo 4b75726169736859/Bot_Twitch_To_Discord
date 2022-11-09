@@ -53,12 +53,12 @@ if __name__ == '__main__':
                     if not check_if_string_in_file(file_log_name, name + '|' + gameCurrent[1]):
                         sendToDiscord(name)
                         text_file = open(file_log_name, "a")
-                        n = text_file.write(name + '|' + gameCurrent[1])
+                        n = text_file.write(name + '|' + gameCurrent[1] + "\n")
                         text_file.close()
                 else:
                     sendToDiscord(name)
                     text_file = open(file_log_name, "a")
-                    n = text_file.write(name + '|' + gameCurrent[1])
+                    n = text_file.write(name + '|' + gameCurrent[1] + "\n")
                     text_file.close()
             else:
                 if exists(file_log_name):
